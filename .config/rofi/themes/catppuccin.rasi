@@ -1,0 +1,61 @@
+@import "catppuccin-mocha"
+
+* {
+  font: "iMWriting Nerd Font Mono 13";
+  background-color:            @base;
+  border-color:                @mauve;
+  spacing:                     2;
+
+}
+element normal.normal {
+    text-color:       @mauve;
+}
+element selected.normal {
+    text-color:       @pink;
+}
+element alternate.normal {
+    text-color:       @mauve;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+}
+window {
+    padding:          0;
+    width:            325px;
+    border:           1;
+}
+listview {
+    padding:      11px 11px 11px ;
+    scrollbar:    false;
+    border-color: @mauve;
+    spacing:      0px ;
+    fixed-height: 0;
+    border:       1px solid 0px 0px ;
+}
+inputbar {
+    padding:    5px 10px 5px;
+    spacing:    0px ;
+    text-color: @mauve;
+    children:   [ "textbox-prompt-colon","entry","textbox-num-sep"];
+}
+entry {
+    text-color:        @mauve;
+    placeholder-color: @mauve;
+    placeholder:       "Search";
+    vertical-align:    0.5;
+    horizontal-align:  0.5;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        "[";
+    text-color: @mauve;
+    vertical-align: 0.5;
+}
+textbox-num-sep {
+   expand:    false;
+   str:       "]";
+   text-color: @mauve;
+   vertical-align: 0.5;
+}

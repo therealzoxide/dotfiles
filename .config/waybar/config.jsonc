@@ -1,0 +1,115 @@
+{
+    "spacing": 2,
+    "modules-left": [
+      "clock",
+      "battery",
+      "memory"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "network",
+      "wireplumber",
+      "group/system"
+    ],
+
+    "group/system": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 500,
+        "transition-left-to-right": false
+      },
+      "modules": [
+      "custom/logo",
+      "tray",
+      "custom/dnd",
+      "custom/power",
+      "idle_inhibitor"
+      ]
+    },
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "persistent-workspaces": {
+        //"*": [1,2,3,4,5,6,7,8,9,10]
+        "DP-1": [1, 2, 3, 4, 5],
+        "DP-2": [6, 7, 8, 9, 10]
+      }
+    },
+
+    "wireplumber": {
+      "on-click": "foot -e fish -c pulsemixer",
+      "format": "[ Volume: {volume}% ]",
+      "tooltip": false
+    },
+
+    "idle_inhibitor": {
+      "tooltip": false,
+      "format": "{icon} ",
+      "format-icons": {
+        "activated": "[ No Sleep ]",
+        "deactivated": "[ Sleep ]"
+      }
+    },
+
+    "network": {
+      "tooltip": false,
+      "format-wifi": "[ WiFi: {bandwidthDownBytes} ]",
+      "format-ethernet": "[ Eth: {bandwidthDownBytes} ]",
+      "format-disconnected": "[ Disconnected ]",
+      "on-click": "nm-connection-editor"
+    },
+
+    "memory": {
+      "format": "[ Memory: {used} GiB ]",
+      "format-alt": "[ Swap: {swapUsed} GiB ]",
+      "on-click-right": "foot -e fish -c 'btm'",
+      "tooltip": false
+    },
+
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "[ Draining: {capacity}% ]",
+      "format-full": "[ Full: {capacity}% ]",
+      "format-charging": "[ Charging: {capacity}% ]",
+      "format-plugged": "[ Charged: {capacity}% ]",
+      "format-alt": "[ Remaining: {time} ]"
+    },
+  
+    "clock": {
+	    "format": "[ Time: {:%I:%M %p} ]",
+      "format-alt": "[ Date: {:%b %d %Y} ]",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "tray": {
+      "spacing": 9,
+      "icon-size": 13
+    },
+
+    "custom/dnd": {
+      "exec": "~/.config/waybar/toggle_dnd.sh",
+      "interval": 1,
+      "format": "{}",
+      "on-click": "~/.config/waybar/toggle_dnd.sh toggle",
+      "tooltip": false
+    },
+
+
+    "custom/power": {
+      "format": "[ Power ]",
+      "on-click": "rofi -show powermenu -modi powermenu:~/.config/rofi/power-menu -theme ~/.config/rofi/themes/power.rasi",
+      "tooltip": false
+    },
+
+    "custom/logo": {
+      "format": "",
+      "on-click": "rofi -show drun",
+      "tooltip": false
+    }
+
+  }

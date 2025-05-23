@@ -1,0 +1,4 @@
+name = GruvboxHyprCursors
+description = based on Volantes Cursors/Catppuccin Cursors
+version = "v1.0"
+cursors_directory = hyprcursors

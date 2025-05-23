@@ -1,0 +1,68 @@
+@import "gruvbox-dark"
+
+* {
+  font: "iMWriting Nerd Font Mono 13";
+  background-color:            @bg0;
+  border-color:                @blue0;
+  spacing:                     2;
+
+}
+
+element {
+    children:     [ "textbox-prompt-colon","element-text","textbox-num-sep"];
+}
+element normal.normal {
+    text-color:       @blue0;
+}
+element selected.normal {
+    text-color:       @yellow0;
+}
+element alternate.normal {
+    text-color:       @blue0;
+}
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+}
+window {
+    padding:          0;
+    width:            175px;
+    height:           137px;
+    border:           1;
+}
+listview {
+    padding:      5px 9px 5px 9px;
+    scrollbar:    false;
+    border-color: @blue0;
+    spacing:      0px ;
+    fixed-height: 0;
+    border:       0px solid 0px 0px ;
+}
+inputbar {
+    enabled:    false;
+    padding:    5px 10px 5px;
+    spacing:    0px ;
+    text-color: @blue0;
+    children:   [ "textbox-prompt-colon","entry","textbox-num-sep"];
+}
+entry {
+    enabled:           false;
+    text-color:        @blue0;
+    placeholder-color: @blue0;
+    placeholder:       "Search";
+    vertical-align:    0.5;
+    horizontal-align:  0.5;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        "[";
+    text-color: @blue0;
+    vertical-align: 0.5;
+}
+textbox-num-sep {
+   expand:    false;
+   str:       "]";
+   text-color: @blue0;
+   vertical-align: 0.5;
+}

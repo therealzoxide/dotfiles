@@ -1,0 +1,20 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/ayaya/.config/fastfetch/migu.txt"
+  },
+  "modules": [
+    "break",
+    "title",
+    "os",
+    "wm",
+    "break",
+    "uptime",
+    "packages",
+    "processes",
+    "break",
+    "memory",
+    "swap",
+    "wifi"
+  ]
+}
